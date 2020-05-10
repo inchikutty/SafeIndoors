@@ -2,5 +2,5 @@
     <!--
    
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"><KEY_HERE></string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"></string>
 </resources>
