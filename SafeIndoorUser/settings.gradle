@@ -1,2 +1,3 @@
 rootProject.name='SafeIndoorUser'
 include ':app'
+include ':activityrecognizer'

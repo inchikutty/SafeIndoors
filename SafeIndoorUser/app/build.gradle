@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
 
     defaultConfig {
@@ -27,6 +27,11 @@ android {
     aaptOptions {
         noCompress "tflite"
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '29.0.0'
 
 }
 
@@ -46,6 +51,8 @@ dependencies {
     implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
     // If you want to use custom Keras models from TFLiteTransferConverter
     // Python API, uncomment the following Flex AAR dependency.
+    implementation project(path: ':activityrecognizer')
+    //implementation 'com.inchikutty.activityrecognizer'
     implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:0.0.0-nightly'
     def lifecycle_version = '2.1.0-rc01'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
